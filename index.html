@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sleepy Nana Tracker ♡</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img/icon.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💤 Sleepy Nana Tracker ♡</h1>
+            <p class="subtitle">Aku mau tidur cantik 8 jam ya~ 🌙🐰✨</p>
+        </header>
+
+        <section class="stats-card">
+            <div class="stat debt">
+                <div class="icon">😴</div>
+                <h3>Sleep Debt</h3>
+                <p id="sleep-debt">0 jam</p>
+                <small>Kurang tidur nih~ harus ngejar!</small>
+            </div>
+            <div class="stat excess">
+                <div class="icon">✨</div>
+                <h3>Excess Sleep</h3>
+                <p id="excess-sleep">0 jam</p>
+                <small>Bonus tidur manis~ ♡</small>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <div class="month-nav">
+                <button class="nav-btn prev" onclick="prevMonth()">◀</button>
+                <h2 id="month-year">Februari 2026</h2>
+                <button class="nav-btn next" onclick="nextMonth()">▶</button>
+            </div>
+            <div class="calendar" id="calendar"></div>
+        </section>
+
+        <div id="input-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">×</span>
+                <h2><span style="font-size:1.8rem;">🐰</span> Berapa jam kamu tidur hari ini?</h2>
+                <p id="modal-date"></p>
+                <input type="number" id="sleep-hours" min="0" max="24" step="0.5" placeholder="contoh: 7.5"/>
+                <button onclick="saveSleep()">Simpan & peluk guling ♡</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
